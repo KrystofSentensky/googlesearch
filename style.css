@@ -1,0 +1,149 @@
+/* Základní styly a reset */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+/* Horní navigace */
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Hlavní obsah - vycentrování na střed obrazovky */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    width: 100%;
+    padding: 0 16px;
+    margin-top: -50px; /* Jemné posunutí nahoru pro optický střed s ohledem na záhlaví */
+}
+
+/* Google Logo stylizace (reaktivní velikost pro mobily) */
+.logo {
+    font-size: clamp(50px, 10vw, 85px);
+    font-weight: bold;
+    letter-spacing: -4px;
+    margin-bottom: 25px;
+    font-family: 'Product Sans', Arial, sans-serif;
+    text-align: center;
+    user-select: none;
+}
+
+.blue { color: #4285F4; }
+.red { color: #EA4335; }
+.yellow { color: #FBBC05; }
+.green { color: #34A853; }
+
+/* Formulář */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Vyhledávací pole přizpůsobené pro mobily i desktop */
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 582px;
+    height: 44px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    padding: 0 14px;
+    background-color: #fff;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.search-bar-container:hover,
+.search-bar-container:focus-within {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-color: rgba(223, 225, 229, 0);
+}
+
+.search-icon {
+    fill: #9aa0a6;
+    height: 20px;
+    width: 20px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    height: 34px;
+    width: 100%;
+}
+
+/* Tlačítka */
+.buttons-container {
+    margin-top: 25px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap; /* Na malých displejích se tlačítka případně přehledně zarovnají */
+}
+
+.search-btn {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.search-btn:hover {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+
+footer {
+    height: 50px;
+}
