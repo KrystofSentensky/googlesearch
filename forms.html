@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukázka formulářových prvků</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-nav-advanced">
+        <a href="index.html" class="logo-small">Google</a>
+        <div class="top-links">
+            <a href="index.html">Hledání Google</a>
+            <a href="images.html">Obrázky</a>
+            <a href="advanced.html">Pokročilé hledání</a>
+            <a href="https://krystofsentensky.github.io/Portfolio/" target="_blank" rel="noopener">Moje Portfolio</a>
+        </div>
+    </header>
+
+    <main class="forms-showcase-container">
+        <h2>Přehled formulářových prvků (Demonstrační stránka)</h2>
+        <!-- Upozornění pro vyučujícího, že formulář je záměrně nefunkční dle zadání -->
+        <p class="notice-badge">Poznámka: Formuláře na této stránce jsou nefunkční a slouží pouze jako demonstrační ukázka různých typů formulářových prvků v HTML.</p>
+
+        <!-- onsubmit="return false;" zabraňuje odeslání formuláře při kliknutí -->
+        <form class="demo-form" onsubmit="return false;">
+            
+            <!-- atribut 'disabled' u fieldsetu nebo vstupů je deaktivuje a zešediví -->
+            <fieldset class="disabled-fieldset">
+                <legend>Osobní údaje a textové vstupy</legend>
+                
+                <div class="form-group">
+                    <label for="demo-text">Textové pole (text):</label>
+                    <input type="text" id="demo-text" placeholder="Zadejte text..." disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="demo-email">E-mail pole (email):</label>
+                    <input type="email" id="demo-email" placeholder="jan@example.com" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="demo-pass">Heslo (password):</label>
+                    <input type="password" id="demo-pass" value="tajneheslo" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="demo-num">Číslo (number):</label>
+                    <input type="number" id="demo-num" min="1" max="100" value="42" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="demo-date">Datum (date):</label>
+                    <input type="date" id="demo-date" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="demo-color">Barva (color):</label>
+                    <input type="color" id="demo-color" value="#1a73e8" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="demo-range">Posuvník (range):</label>
+                    <input type="range" id="demo-range" min="0" max="100" disabled>
+                </div>
+            </fieldset>
+
+            <fieldset class="disabled-fieldset">
+                <legend>Výběrové prvky (Select, Radio, Checkbox)</legend>
+
+                <div class="form-group">
+                    <label for="demo-select">Rozbalovací nabídka (select):</label>
+                    <select id="demo-select" disabled>
+                        <option>Možnost 1</option>
+                        <option>Možnost 2</option>
+                        <option>Možnost 3</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Přepínače (radio - výber jedné možnosti):</label>
+                    <div class="inline-options">
+                        <label><input type="radio" name="r" checked disabled> Volba A</label>
+                        <label><input type="radio" name="r" disabled> Volba B</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Zaškrtávací políčka (checkbox - více možností):</label>
+                    <div class="inline-options">
+                        <label><input type="checkbox" checked disabled> Souhlasím s podmínkami</label>
+                        <label><input type="checkbox" disabled> Chci zasílat newsletter</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="disabled-fieldset">
+                <legend>Ostatní prvky (Textarea, File, Button)</legend>
+
+                <div class="form-group">
+                    <label for="demo-area">Víceřádkový text (textarea):</label>
+                    <textarea id="demo-area" rows="3" disabled>Zde je ukázka víceřádkového textového pole...</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="demo-file">Nahrání souboru (file):</label>
+                    <input type="file" id="demo-file" disabled>
+                </div>
+
+                <div class="form-group button-group-demo">
+                    <button type="button" disabled class="btn-demo">Standardní tlačítko</button>
+                    <input type="reset" value="Resetovat" disabled class="btn-demo">
+                    <input type="submit" value="Odeslat (nefunkční)" disabled class="btn-demo">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener">HTML Validátor</a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">CSS Validátor</a>
+        <a href="https://github.com/krystofsentensky/googlesearch/blob/main/citace.md" target="_blank" rel="noopener">Citace a zdroje</a>
+        <a href="https://krystofsentensky.github.io/Portfolio/" target="_blank" rel="noopener">Moje Portfolio</a>
+    </footer>
+</body>
+</html>

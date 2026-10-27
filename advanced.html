@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Pokročilé vyhledávání</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-nav-advanced">
+        <a href="index.html" class="logo-small">Google</a>
+        <div class="top-links">
+            <a href="index.html">Hledání Google</a>
+            <a href="images.html">Obrázky</a>
+            <a href="forms.html">Ukázka formulářů</a>
+            <a href="https://krystofsentensky.github.io/Portfolio/" target="_blank" rel="noopener">Moje Portfolio</a>
+        </div>
+    </header>
+
+    <main class="advanced-container">
+        <h2 class="advanced-title">Pokročilé vyhledávání</h2>
+        <hr class="divider">
+
+        <form action="https://www.google.com/search" method="get" class="advanced-form">
+            <p class="section-label">Najíti stránky, které obsahují...</p>
+
+            <!-- name="q" -> Vyhledání stránek se všemi těmito slovy -->
+            <div class="form-row">
+                <label for="all-words">všechna tato slova:</label>
+                <input type="text" id="all-words" name="q" class="adv-input">
+            </div>
+
+            <!-- name="as_epq" -> Exact Phrase Query (přesná fráze v uvozovkách) -->
+            <div class="form-row">
+                <label for="exact-phrase">přesně toto slovo nebo frázi:</label>
+                <input type="text" id="exact-phrase" name="as_epq" class="adv-input">
+            </div>
+
+            <!-- name="as_oq" -> Or Query (libovolné ze slov oddělené operátorem OR) -->
+            <div class="form-row">
+                <label for="any-words">libovolné z těchto slov:</label>
+                <input type="text" id="any-words" name="as_oq" class="adv-input">
+            </div>
+
+            <!-- name="as_eq" -> Exclude Query (vyloučení slov s mínusem -) -->
+            <div class="form-row">
+                <label for="none-words">žádné z těchto slov:</label>
+                <input type="text" id="none-words" name="as_eq" class="adv-input">
+            </div>
+
+            <!-- Modré tlačítko pro odeslání pokročilého dotazu -->
+            <div class="form-row button-row">
+                <label></label>
+                <input type="submit" value="Pokročilé vyhledávání" class="btn-advanced">
+            </div>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener">HTML Validátor</a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">CSS Validátor</a>
+        <a href="https://github.com/krystofsentensky/googlesearch/blob/main/citace.md" target="_blank" rel="noopener">Citace a zdroje</a>
+        <a href="https://krystofsentensky.github.io/Portfolio/" target="_blank" rel="noopener">Moje Portfolio</a>
+    </footer>
+</body>
+</html>

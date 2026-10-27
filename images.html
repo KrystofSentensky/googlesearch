@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Obrázky</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="center-page">
+    <header class="top-nav">
+        <a href="index.html">Hledání Google</a>
+        <a href="advanced.html">Pokročilé hledání</a>
+        <a href="forms.html">Ukázka formulářů</a>
+        <a href="https://krystofsentensky.github.io/Portfolio/" target="_blank" rel="noopener">Moje Portfolio</a>
+    </header>
+
+    <main class="search-container">
+        <h1 class="logo">Google<span class="logo-sub">obrázky</span></h1>
+        
+        <form action="https://www.google.com/search" method="get" class="search-form">
+            <!-- Skryté vstupní pole (type="hidden"): řiká Googlu, že chceme vyhledávat v obrázcích (tbm=isch znamená "to be matched = image search") -->
+            <input type="hidden" name="tbm" value="isch">
+            
+            <div class="search-bar-wrapper">
+                <input type="text" name="q" class="search-bar" required aria-label="Vyhledat obrázky">
+            </div>
+            <div class="button-group">
+                <input type="submit" value="Hledat obrázky" class="btn">
+            </div>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener">HTML Validátor</a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">CSS Validátor</a>
+        <a href="https://github.com/krystofsentensky/googlesearch/blob/main/citace.md" target="_blank" rel="noopener">Citace a zdroje</a>
+        <a href="https://krystofsentensky.github.io/Portfolio/" target="_blank" rel="noopener">Moje Portfolio</a>
+    </footer>
+</body>
+</html>
