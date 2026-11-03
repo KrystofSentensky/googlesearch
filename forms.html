@@ -19,55 +19,65 @@
 
     <main class="forms-showcase-container">
         <h2>Přehled formulářových prvků (Demonstrační stránka)</h2>
-        <!-- Upozornění pro vyučujícího, že formulář je záměrně nefunkční dle zadání -->
-        <p class="notice-badge">Poznámka: Formuláře na této stránce jsou nefunkční a slouží pouze jako demonstrační ukázka různých typů formulářových prvků v HTML.</p>
+        <!-- Upozornění na nefunkčnost formuláře dle školního zadání -->
+        <p class="notice-badge">Poznámka: Formuláře na této stránce jsou nefunkční a slouží pouze jako demonstrační ukázka HTML prvků.</p>
 
-        <!-- onsubmit="return false;" zabraňuje odeslání formuláře při kliknutí -->
+        <!-- onsubmit="return false;" zabraňuje odeslání stránky při kliknutí na tlačítka -->
         <form class="demo-form" onsubmit="return false;">
             
-            <!-- atribut 'disabled' u fieldsetu nebo vstupů je deaktivuje a zešediví -->
+            <!-- SKUPINA 1: Textové a datové vstupy -->
+            <!-- <fieldset> ohraničuje skupinu prvků, <legend> vytváří nadpis ohraničení -->
             <fieldset class="disabled-fieldset">
                 <legend>Osobní údaje a textové vstupy</legend>
                 
+                <!-- Běžný textový vstup -->
                 <div class="form-group">
                     <label for="demo-text">Textové pole (text):</label>
                     <input type="text" id="demo-text" placeholder="Zadejte text..." disabled>
                 </div>
 
+                <!-- E-mailový vstup (s automatickou kontrolou formátu zavináče) -->
                 <div class="form-group">
                     <label for="demo-email">E-mail pole (email):</label>
                     <input type="email" id="demo-email" placeholder="jan@example.com" disabled>
                 </div>
 
+                <!-- Pole pro heslo (skrývá psané znaky za tečky) -->
                 <div class="form-group">
                     <label for="demo-pass">Heslo (password):</label>
                     <input type="password" id="demo-pass" value="tajneheslo" disabled>
                 </div>
 
+                <!-- Číselný vstup s nastaveným minimem a maximem -->
                 <div class="form-group">
                     <label for="demo-num">Číslo (number):</label>
                     <input type="number" id="demo-num" min="1" max="100" value="42" disabled>
                 </div>
 
+                <!-- Výběr data z kalendáře -->
                 <div class="form-group">
                     <label for="demo-date">Datum (date):</label>
                     <input type="date" id="demo-date" disabled>
                 </div>
 
+                <!-- Výběr barvy pomocí palety -->
                 <div class="form-group">
                     <label for="demo-color">Barva (color):</label>
                     <input type="color" id="demo-color" value="#1a73e8" disabled>
                 </div>
 
+                <!-- Posuvník pro výběr hodnoty v rozsahu -->
                 <div class="form-group">
                     <label for="demo-range">Posuvník (range):</label>
                     <input type="range" id="demo-range" min="0" max="100" disabled>
                 </div>
             </fieldset>
 
+            <!-- SKUPINA 2: Výběrové prvky -->
             <fieldset class="disabled-fieldset">
                 <legend>Výběrové prvky (Select, Radio, Checkbox)</legend>
 
+                <!-- Rozbalovací seznam (Select) s možnostmi (Option) -->
                 <div class="form-group">
                     <label for="demo-select">Rozbalovací nabídka (select):</label>
                     <select id="demo-select" disabled>
@@ -77,6 +87,7 @@
                     </select>
                 </div>
 
+                <!-- Prepínače (Radio buttons): Shodný atribut name="r" zajišťuje výběr pouze 1 možnosti z dané skupiny -->
                 <div class="form-group">
                     <label>Přepínače (radio - výber jedné možnosti):</label>
                     <div class="inline-options">
@@ -85,6 +96,7 @@
                     </div>
                 </div>
 
+                <!-- Zaškrtávací políčka (Checkboxes): Umožňují nezávislý výběr více možností současně -->
                 <div class="form-group">
                     <label>Zaškrtávací políčka (checkbox - více možností):</label>
                     <div class="inline-options">
@@ -94,19 +106,23 @@
                 </div>
             </fieldset>
 
+            <!-- SKUPINA 3: Ostatní prvky -->
             <fieldset class="disabled-fieldset">
                 <legend>Ostatní prvky (Textarea, File, Button)</legend>
 
+                <!-- Víceřádkové textové pole -->
                 <div class="form-group">
                     <label for="demo-area">Víceřádkový text (textarea):</label>
                     <textarea id="demo-area" rows="3" disabled>Zde je ukázka víceřádkového textového pole...</textarea>
                 </div>
 
+                <!-- Tlačítko pro nahrání souboru z počítače -->
                 <div class="form-group">
                     <label for="demo-file">Nahrání souboru (file):</label>
                     <input type="file" id="demo-file" disabled>
                 </div>
 
+                <!-- Různé druhy tlačítek -->
                 <div class="form-group button-group-demo">
                     <button type="button" disabled class="btn-demo">Standardní tlačítko</button>
                     <input type="reset" value="Resetovat" disabled class="btn-demo">
@@ -118,7 +134,15 @@
 
     <footer class="site-footer">
         <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener">HTML Validátor</a>
-        <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">CSS Validátor</a>
+        
+        <p>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">
+                <img style="border:0;width:88px;height:31px"
+                    src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+                    alt="Ověřit CSS!" />
+            </a>
+        </p>
+
         <a href="https://github.com/krystofsentensky/googlesearch/blob/main/citace.md" target="_blank" rel="noopener">Citace a zdroje</a>
         <a href="https://krystofsentensky.github.io/Portfolio/" target="_blank" rel="noopener">Moje Portfolio</a>
     </footer>

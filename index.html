@@ -1,46 +1,71 @@
 <!DOCTYPE html>
+<!-- Určení typu dokumentu pro prohlížeč (HTML5 standard) -->
 <html lang="cs">
 <head>
+    <!-- Nastavení kódování češtiny a responzivního zobrazení pro mobilní zařízení -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Search</title>
+    <!-- Propojení s externím souborem CSS stylů -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="center-page">
-    <!-- Horní navigace s odkazy na ostatní stránky a portfolio -->
+    <!-- Horní navigační lišta s odkazy na ostatní stránky a portfolio -->
     <header class="top-nav">
+        <!-- Odkazy na podstránky projektu -->
         <a href="images.html">Obrázky</a>
         <a href="advanced.html">Pokročilé hledání</a>
         <a href="forms.html">Ukázka formulářů</a>
+        <!-- target="_blank" otevře odkaz v nové záložce, rel="noopener" zvyšuje bezpečnost -->
         <a href="https://krystofsentensky.github.io/Portfolio/" target="_blank" rel="noopener">Moje Portfolio</a>
     </header>
 
-    <!-- Hlavní vyhledávací sekce vycentrovaná na střed -->
+    <!-- Hlavní vyhledávací sekce vycentrovaná na střed stránky -->
     <main class="search-container">
+        <!-- Hlavní nadpis stylizovaný jako logo Google -->
         <h1 class="logo">Google</h1>
         
-        <!-- Formulář odesílá data metodou GET na server Google -->
-        <!-- Parametr 'action' určuje cílovou URL vyhledávání -->
+        <!-- FORMULÁŘ VYHLEDÁVÁNÍ -->
+        <!-- action: Cílová URL adresa vyhledávače Google, kam se pošlou zadaná data -->
+        <!-- method="get": Kóduje zadané parametry přímo do URL adresy za znak '?' -->
         <form action="https://www.google.com/search" method="get" class="search-form">
+            
             <div class="search-bar-wrapper">
-                <!-- Parametr 'name="q"' představuje text dotazu (q = query), který Google vyžaduje -->
+                <!-- VSTUPNÍ POLE VYHLEDÁVÁNÍ -->
+                <!-- name="q": Klíčový atribut pro Google (q = query). Google vyžaduje tento název parametru -->
+                <!-- required: Nutí uživatele vyplnit text před odesláním -->
                 <input type="text" name="q" class="search-bar" required aria-label="Vyhledat">
             </div>
+
             <div class="button-group">
-                <!-- Standardní odesílací tlačítko -->
+                <!-- TLAČÍTKO 1: Běžné vyhledávání -->
                 <input type="submit" value="Hledat Googlem" class="btn">
                 
-                <!-- Tlačítko 'btnI' (I'm Feeling Lucky) přesměruje uživatele přímo na 1. výsledek hledání -->
+                <!-- TLAČÍTKO 2: Zkusím štěstí -->
+                <!-- name="btnI": Přidá do URL parametr btnI, který instruuje Google k přímému přesměrování na 1. výsledek -->
                 <input type="submit" name="btnI" value="Zkusím štěstí" class="btn">
             </div>
         </form>
     </main>
 
-    <!-- Zápatí s povinnými odkazy na validátory, citace a portfolio -->
+    <!-- ZÁPATÍ STRÁNKY (Site Footer) s povinnými odkazy a validací -->
     <footer class="site-footer">
+        <!-- Odkaz na automatickou validaci HTML kódu aktuální stránky -->
         <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener">HTML Validátor</a>
-        <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">CSS Validátor</a>
+        
+        <!-- Odkaz na validaci CSS s oficiální grafickou ikonkou W3C -->
+        <p>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">
+                <img style="border:0;width:88px;height:31px"
+                    src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+                    alt="Ověřit CSS!" />
+            </a>
+        </p>
+
+        <!-- Odkaz na soubor s citacemi v repozitáři na GitHubu -->
         <a href="https://github.com/krystofsentensky/googlesearch/blob/main/citace.md" target="_blank" rel="noopener">Citace a zdroje</a>
+        
+        <!-- Odkaz na osobní portfolio autora -->
         <a href="https://krystofsentensky.github.io/Portfolio/" target="_blank" rel="noopener">Moje Portfolio</a>
     </footer>
 </body>

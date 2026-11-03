@@ -15,15 +15,20 @@
     </header>
 
     <main class="search-container">
+        <!-- Logo s odlišeným podnápisem "obrázky" -->
         <h1 class="logo">Google<span class="logo-sub">obrázky</span></h1>
         
         <form action="https://www.google.com/search" method="get" class="search-form">
-            <!-- Skryté vstupní pole (type="hidden"): řiká Googlu, že chceme vyhledávat v obrázcích (tbm=isch znamená "to be matched = image search") -->
+            <!-- SKRYTÉ VSTUPNÍ POLE (type="hidden") -->
+            <!-- Uživatel toto pole nevidí, ale při odeslání přikládá do URL parametr tbm=isch -->
+            <!-- tbm=isch znamená "To Be Matched = Image Search", což přepne vyhledávání na záložku Obrázky -->
             <input type="hidden" name="tbm" value="isch">
             
             <div class="search-bar-wrapper">
+                <!-- Textové pole pro hledání obrázku (předává parametr q) -->
                 <input type="text" name="q" class="search-bar" required aria-label="Vyhledat obrázky">
             </div>
+            
             <div class="button-group">
                 <input type="submit" value="Hledat obrázky" class="btn">
             </div>
@@ -32,7 +37,15 @@
 
     <footer class="site-footer">
         <a href="https://validator.w3.org/check?uri=referer" target="_blank" rel="noopener">HTML Validátor</a>
-        <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">CSS Validátor</a>
+        
+        <p>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank" rel="noopener">
+                <img style="border:0;width:88px;height:31px"
+                    src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+                    alt="Ověřit CSS!" />
+            </a>
+        </p>
+
         <a href="https://github.com/krystofsentensky/googlesearch/blob/main/citace.md" target="_blank" rel="noopener">Citace a zdroje</a>
         <a href="https://krystofsentensky.github.io/Portfolio/" target="_blank" rel="noopener">Moje Portfolio</a>
     </footer>

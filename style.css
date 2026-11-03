@@ -1,28 +1,31 @@
+/* RESET STYLŮ: Sjednocení výpočtu rozměrů buněk a nulování výchozích okrajů */
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Zahrnuje padding a border do celkové šířky/výšky prvku */
     margin: 0;
     padding: 0;
 }
 
+/* ZÁKLADNÍ NASTAVENÍ TĚLA STRÁNKY */
 body {
     font-family: arial, sans-serif;
     color: #202124;
     background-color: #ffffff;
-    min-height: 100vh;
+    min-height: 100vh; /* Roztáhne tělo stránky na 100 % výšky okna prohlížeče */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Uspořádá prkvy (header, main, footer) svisle pod sebe */
 }
 
+/* Třída pro hlavní vyhledávací stránku pro roztažení obsahu mezi vršek a spodek */
 .center-page {
     justify-content: space-between;
 }
 
-/* Navigace */
+/* HORNÍ NAVIGACE (HLAVNÍ STRÁNKY) */
 .top-nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; /* Zarovná odkazy doprava */
     padding: 16px 24px;
-    gap: 15px;
+    gap: 15px; /* Mezera mezi jednotlivými odkazy */
 }
 
 .top-nav a, .top-links a {
@@ -32,15 +35,16 @@ body {
 }
 
 .top-nav a:hover, .top-links a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Podtržení odkazu při najetí myší */
 }
 
+/* NAVIGACE PRO POKROČILÉ VYHLEDÁVÁNÍ A FORMS */
 .top-nav-advanced {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Malé logo vlevo, odkazy vpravo */
     align-items: center;
     padding: 15px 30px;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb; /* Tenká dělící linka dole */
 }
 
 .logo-small {
@@ -55,14 +59,15 @@ body {
     gap: 15px;
 }
 
-/* Hlavní sekce - Search */
+/* VYHLEDÁVACÍ KONTEJNER (CENTER CONTAINER) */
 .search-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Zarovná logo a formulář přesně na střed */
     margin-top: 100px;
 }
 
+/* LOGO GOOGLE */
 .logo {
     font-size: 90px;
     font-weight: 500;
@@ -81,9 +86,10 @@ body {
     letter-spacing: normal;
 }
 
+/* FORMULÁŘ VYHLEDÁVÁNÍ */
 .search-form {
     width: 100%;
-    max-width: 584px;
+    max-width: 584px; /* Maximální šířka odpovídající reálnému vyhledávači Google */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,22 +99,25 @@ body {
     width: 100%;
 }
 
+/* ZAOBLENÉ VYHLEDÁVACÍ POLE (SEARCH BAR) */
 .search-bar {
     width: 100%;
     height: 46px;
     padding: 0 20px;
     border: 1px solid #dfe1e5;
-    border-radius: 24px;
+    border-radius: 24px; /* Vytváří typické zaoblené rohy Google vyhledávání */
     font-size: 16px;
     outline: none;
     transition: box-shadow 0.2s;
 }
 
+/* Efekt stínu při najetí myší nebo kliknutí (focus) */
 .search-bar:hover, .search-bar:focus {
     box-shadow: 0 1px 6px rgba(32,33,36,0.28);
     border-color: rgba(223,225,229,0);
 }
 
+/* TLAČÍTKA POD VYHLEDÁVACÍM POLEM */
 .button-group {
     margin-top: 25px;
     display: flex;
@@ -131,7 +140,7 @@ body {
     color: #202124;
 }
 
-/* Pokročilé vyhledávání */
+/* STRÁNKA POKROČILÉHO VYHLEDÁVÁNÍ (ADVANCED SEARCH) */
 .advanced-container {
     width: 100%;
     max-width: 1140px;
@@ -164,13 +173,14 @@ body {
     margin-bottom: 10px;
 }
 
+/* Řádek formuláře pro zarovnání popisku a vstupního pole vedle sebe */
 .form-row {
     display: flex;
     align-items: center;
 }
 
 .form-row label {
-    width: 200px;
+    width: 200px; /* Pevná šířka popisku pro perfektní svislé zarovnání všech polí pod sebou */
     font-size: 13px;
     color: #222;
 }
@@ -189,6 +199,7 @@ body {
     border-color: #4d90fe;
 }
 
+/* TYPICKÉ MODRÉ TLAČÍTKO PRO ADVANCED SEARCH */
 .btn-advanced {
     background-color: #1a73e8;
     color: #ffffff;
@@ -204,7 +215,7 @@ body {
     background-color: #1558d6;
 }
 
-/* Stránka ukázky formulářů */
+/* STRÁNKA S PŘEHLADEM FORMULÁŘŮ (FORMS.HTML) */
 .forms-showcase-container {
     max-width: 800px;
     margin: 30px auto;
@@ -226,6 +237,7 @@ body {
     gap: 20px;
 }
 
+/* Vzhled neaktivních skupin formulářových prvků */
 .disabled-fieldset {
     border: 1px solid #dadce0;
     border-radius: 6px;
@@ -263,15 +275,16 @@ body {
     font-size: 13px;
 }
 
-/* Zápatí */
+/* ZÁPATÍ STRÁNKY (SITE FOOTER) */
 .site-footer {
     background-color: #f2f2f2;
     border-top: 1px solid #e4e4e4;
-    padding: 15px 30px;
+    padding: 10px 30px;
     display: flex;
     justify-content: center;
+    align-items: center; /* Výškově zarovná odkazové texty a obrázek CSS ikony na střed */
     gap: 25px;
-    margin-top: auto;
+    margin-top: auto; /* Klíčové nastavení: Odtlačí zápatí dospodu okna, i když je na stránce málo obsahu */
 }
 
 .site-footer a {
@@ -282,4 +295,10 @@ body {
 
 .site-footer a:hover {
     text-decoration: underline;
+}
+
+.site-footer p {
+    margin: 0;
+    display: flex;
+    align-items: center;
 }
